@@ -1,0 +1,199 @@
+:root {
+    --primary: #646cff;
+    --primary-hover: #535bf2;
+    --text-primary: #213547;
+    --text-secondary: #666;
+    --background-light: #ffffff;
+    --background-dark: #242424;
+    --button-bg-light: #f9f9f9;
+    --button-bg-dark: #1a1a1a;
+    --error: #ef4444;
+    --success: #22c55e;
+    --border-radius: 8px;
+    --transition: 0.25s ease;
+    --bg-primary: #f8fafc;
+    --bg-secondary: #f1f5f9;
+    --bg-card: #ffffff;
+    --border-color: #e2e8f0;
+    --shadow-color: rgba(0, 0, 0, 0.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+    line-height: 1.5;
+    min-height: 100vh;
+    color: var(--text-primary);
+    background-color: var(--background-light);
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: 1rem;
+    background-color: var(--background-light);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.nav-link {
+    padding: 0.5rem 1rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary);
+    background-color: rgba(100, 108, 255, 0.08);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: white;
+    border-bottom: 1px solid #eee;
+}
+
+.page-content {
+    min-height: calc(100vh - 120px);
+    padding: 2rem;
+    background-color: var(--bg-primary);
+}
+
+.page-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary);
+    width: fit-content;
+}
+
+.counters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.counter-section {
+    width: 100%;
+}
+
+.counter-container {
+    padding: 1rem;
+    text-align: center;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px var(--shadow-color);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.counter-container:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.counter-title {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    background-color: var(--button-bg-light);
+    border: 1px solid transparent;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+button:hover {
+    border-color: var(--primary);
+    background-color: rgba(100, 108, 255, 0.08);
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+button:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+    .page-content {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .page-title {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .counters-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .counter-container {
+        margin: 0.5rem;
+        padding: 1rem;
+    }
+
+    .counter-title {
+        font-size: 1.5rem;
+    }
+}

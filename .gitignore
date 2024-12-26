@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+
+# Compiled files
+dist/
+.vite/
+
+# Local build artifacts
+*.log
+*.lock
+
+# dotenv environment variable files
+.env
+.env.*
+
+# Editor and OS-specific files
+*.DS_Store
+.idea/
+.vscode/
+*.iml
+
+# TypeScript
+*.tsbuildinfo
+
+# Debug
+debug.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# JetBrains IDE specific cache files
+.idea/
+out/
+*.iws
+
+# macOS file metadata
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# macOS trash folder which is created automatically on external disk
+.Trashes
