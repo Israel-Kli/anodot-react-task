@@ -1,20 +1,22 @@
 # React Counter Application
-
 A Single Page Application (SPA) built with React that demonstrates global state management using different approaches.
 
 ## Features
-
 - Multiple pages with navigation
 - User information display (username and last login)
 - Global counter implementation using:
-    - React Context
-    - Jotai
-    - React Query
+  - React Context
+  - Jotai
+  - React Query
 - Responsive design
 - TypeScript support
 
-## Tech Stack
+## Deployment
+The application is deployed and publicly available using Azure Static Web Apps service at:
 
+https://lively-coast-015be0003.4.azurestaticapps.net/
+
+## Tech Stack
 - React 18
 - TypeScript
 - React Router v6
@@ -24,14 +26,11 @@ A Single Page Application (SPA) built with React that demonstrates global state 
 - Vite for build tooling
 
 ## Getting Started
-
 ### Prerequisites
-
 - Node.js 18+
 - npm or yarn
 
 ### Installation
-
 ```bash
 # Clone the repository
 git clone https://github.com/Israel-Kli/anodot-react-task
@@ -44,13 +43,11 @@ npm run dev
 ```
 
 ### Building for Production
-
 ```bash
 npm run build
 ```
 
 ## Project Structure
-
 ```
 src/
 ├── components/   # Reusable UI components
@@ -62,9 +59,7 @@ src/
 ```
 
 ## Implementation Details
-
 ### State Management
-
 The project implements three different approaches to global state management:
 
 1. **React Context**: Traditional context-based state management
@@ -72,27 +67,22 @@ The project implements three different approaches to global state management:
 3. **React Query**: Modern cache-based state management with persistence
 
 #### Why Three Different Implementations?
-
 Each state management solution has its strengths:
-
 - **React Context**: Simple, built-in solution for component tree state sharing
 - **Jotai**: Atomic updates with minimal re-renders, great for fine-grained state control
 - **React Query**: Excellent for server state management with caching
 
 ### Responsive Design
-
 - Mobile-first approach
 - Responsive grid layout
 - Flexible navigation menu
 
 ### TypeScript Integration
-
 - Strict type checking enabled
 - Type definitions for all components
 - CSS module type declarations
 
 ## Best Practices
-
 - Component composition
 - Custom hooks for logic reuse
 - Consistent file structure
@@ -100,7 +90,6 @@ Each state management solution has its strengths:
 - Responsive design patterns
 
 ## State Management Comparison
-
 ### React Context
 - Pros: Built-in, simple API
 - Use case: Component tree state sharing
